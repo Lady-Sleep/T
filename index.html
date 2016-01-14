@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>T by html5salon</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>T</h1>
+        <p>测试文件</p>
+        <p class="view"><a href="https://github.com/html5salon/T">View the Project on GitHub <small>html5salon/T</small></a></p>
+        <ul>
+          <li><a href="https://github.com/html5salon/T/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/html5salon/T/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/html5salon/T">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>&lt;!DOCTYPE html&gt;
+
+</p>
+
+图片循环展示
+
+
+body{background:#efefef;}
+#main{min-width:500px;padding:20px;margin:20px auto;background:#fff;border:1px solid #ccc;}
+.showit{text-decoration:none;}
+.showit img{width:100px;height:50px;border:1px solid #000;}
+.on img{border-color:#f00;}
+#showbox{position:absolute;top:0;left:0;width:100%;height:100%;background:#000;text-align:center;}
+#showbox img{max-width:500;margin-top:100px;box-shadow:0 0 20px #fff;border-radius:10px;}
+.txt{width:40px;border:1px solid #000;text-align:center;}
+
+
+<p></p>
+
+<p></p>
+    <div id="main">
+        <h2>
+<a id="图片循环展示" class="anchor" href="#%E5%9B%BE%E7%89%87%E5%BE%AA%E7%8E%AF%E5%B1%95%E7%A4%BA" aria-hidden="true"><span class="octicon octicon-link"></span></a>图片循环展示</h2>
+        <a href="img/1.jpg"><img src="img/1.jpg"></a>
+        <a href="img/2.jpg"><img src="img/2.jpg"></a>
+        <a href="img/3.jpg"><img src="img/3.jpg"></a>
+        <a href="img/4.jpg"><img src="img/4.jpg"></a>
+        <a href="img/5.jpg"><img src="img/5.jpg"></a>
+    </div>
+    
+
+<table id="grid-table">
+    <tbody></tbody>
+</table>
+
+<pre><code>&lt;script src="jquery-1.11.3.min.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+var i = 1;
+var html = '&lt;tr&gt;' +
+        '&lt;td class="tc t-index"&gt;111&lt;/td&gt;' +
+        '&lt;td class="tc t-name"&gt;2222&lt;/td&gt;' +
+        '&lt;td class="set-input"&gt;' + '&lt;input type="text" class="val-input"&gt;' +
+        '&lt;input type="button" value="执行" style="float:right;width:42%;padding:3px 0;border:1px solid #000;"&gt;' + '&lt;/td&gt;' +
+        '&lt;td class="info t-info"&gt;4444&lt;/td&gt;' +
+        '&lt;/tr&gt;';
+for(i;i&lt;8;i++){
+    $("#grid-table tbody").append(html);
+</code></pre>
+
+<p>}</p>
+
+<p>$("#btnParseState").click(function(){
+    $(".grid-table tbody tr").remove();
+  });</p>
+
+<p>var el = $(".val-input");
+  $.each(el,function(i){
+      $(this).on("blur",blurFun);
+  });
+  function blurFun(){
+    var valText = $(this).val();
+    checkEditField(valText);
+    return false;
+  }
+  function checkEditField(valText){
+    alert(valText);
+  }
+    
+    </p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/html5salon">html5salon</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
